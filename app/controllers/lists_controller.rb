@@ -12,7 +12,7 @@ class ListsController < ApplicationController
     #3. データをデータベースに保存するためのsaveメソッド実行
     if @list.save
     #4. トップ画面へリダイレクトするためのコード
-      redirect_to list_path(list.id)
+      redirect_to list_path(@list.id)
     else
       render :new #'new' :new 記述法はどちらでも
       # render: アクション名 同じコントローラ内の別アクションのViewを表示できます。
